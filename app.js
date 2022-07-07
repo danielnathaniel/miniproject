@@ -1,5 +1,5 @@
 // Requirements
-// You must have a game object or class for your Tamagotchi, and event listeners/handlers** that call methods in your game object or class.
+// You must have a game object or class for your Tamagotchi, and event listeners/handlers that call methods in your game object or class.
 
 // Your application must be deployed on Github Pages. There will be a demo on how to deploy to Github Pages next week. If you want to try before then, check out this resource.
 
@@ -33,7 +33,7 @@
 
 // You pet should die if Hunger, Boredom, or Sleepiness hits 10.
 
-// *****Morph your pet at certain ages. not using keyframes - 
+// *****Morph your pet at certain ages. 
 
 // ***Animate your pet across the screen while it's alive.
 
@@ -42,11 +42,12 @@ initiateFirst = () => {
 	document.getElementById("petSleep").addEventListener("click", userPet.addSleepiness);
 	document.getElementById("petEat").addEventListener("click", userPet.addWeight);
 	document.getElementById("petPlay").addEventListener("click", userPet.addBored);
-	setInterval(setMetrics, 100)
-	setInterval(userPet.increaseBored, 5000);
-	setInterval(userPet.increaseSleepiness, 5000)
-	setInterval(userPet.increaseHunger, 5000)
-	setInterval(userPet.addAge, 20000)
+	setInterval(setMetrics, 1000)
+	setInterval(userPet.increaseBored, 3000);
+	setInterval(userPet.increaseSleepiness, 3000)
+	setInterval(userPet.increaseHunger, 3000)
+	setInterval(userPet.addAge, 2000)
+
 
 
 }
@@ -57,8 +58,17 @@ setMetrics = () => {
 	document.getElementById("sleepinessDisplay").innerText = "Sleepiness = " + userPet.sleepiness
 	document.getElementById("boredomDisplay").innerText = "Boredom = " +userPet.boredom
 	document.getElementById("ageDisplay").innerText = "age = " + userPet.age
-	}
 
+	if (userPet.age === 4) {
+	  document.getElementById("petPicture").style.backgroundImage = "url('images/pokemon-4784547_960_720.png')";
+	  		alert("YOU HAVE EVOLVED!")
+}
+	if ( userPet.sleepiness === 10 || userPet.boredom === 10 || userPet.hunger === 10 )	{
+		document.getElementById("petPicture").style.backgroundImage = "url('images/Screen Shot 2022-07-07 at 4.15.02 PM.png')";
+		alert("Your pet is in heaven now")
+	}	
+
+}
 
 
 userName = () => {
@@ -106,6 +116,12 @@ class Pet {
 	}
 	increaseHunger = () => {
 		this.hunger++
+	}
+	lightOn = () => {
+	document.body.style.background = "url('images/retro-s-videogame-tunnel-background-mountains-sun-bit-depth-field-inspired-vintage-videogames-web-print-156623128.jpeg') no-repeat center center fixed";
+	}
+	lightOff = () => {
+	document.body.style.background = "url('images/darkness.png')"
 	}
 
 }

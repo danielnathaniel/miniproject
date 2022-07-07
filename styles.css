@@ -1,3 +1,6 @@
+/*how to get videogame background image to expand to full large top monitor screen size without white spaces*/
+
+/*how to get alert to stop repeating*/
 
 
 #gameTitle {
@@ -15,7 +18,7 @@
 	color: #b8e554;
 }
 
-	html,body {
+	body {
     background: url(images/retro-s-videogame-tunnel-background-mountains-sun-bit-depth-field-inspired-vintage-videogames-web-print-156623128.jpeg) no-repeat center center fixed;
     background-size: cover;  
 }
@@ -50,7 +53,7 @@ tr
 	}
 
 
-.petPicture {
+#petPicture {
 		display: flex;
 		z-index: 3;
 		background-image: url(images/petpicture.jpg); /*dom manipulation change background image css*/
