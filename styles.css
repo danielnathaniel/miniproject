@@ -1,0 +1,86 @@
+
+
+#gameTitle {
+	z-index: 2;
+	background-color: rgba(255, 0, 0, 0.6);
+	text-align: center;
+	color: #b8e554;
+
+}
+
+#userPetName{
+	z-index: 2;
+	background-color: rgba(155, 122, 250, 0.5);
+	text-align: center;
+	color: #b8e554;
+}
+
+	html,body {
+    background: url(images/retro-s-videogame-tunnel-background-mountains-sun-bit-depth-field-inspired-vintage-videogames-web-print-156623128.jpeg) no-repeat center center fixed;
+    background-size: cover;  
+}
+
+@keyframes {
+/*MOVE PIXELS LEFT AND RIGHT UP DOWN....FOR ANIMATION*/ 
+}
+
+
+ul {
+	display: flex;
+	background-color: rgba(11, 30, 220, 0.5);
+	flex-direction: column;
+	margin-right: 600px;
+	font-weight: 900;
+	color: lightgreen;
+	float: left;
+
+
+;
+}
+
+tr
+	{
+	display: flex;
+	background-color: rgba(241, 10, 220, 0.6);
+	flex-direction: column;
+	margin-right: 600px;
+	font-weight: 900;
+	color: lightgreen;
+	float: left;
+	}
+
+
+.petPicture {
+		display: flex;
+		z-index: 3;
+		background-image: url(images/petpicture.jpg); /*dom manipulation change background image css*/
+		background-size: contain;
+		background-repeat: no-repeat;
+  		width: 200px;
+  		height: 200px;
+  		float: right;
+  		animation: userPicture 10s infinite;
+
+}
+
+@keyframes userPicture {
+	from { margin-top: 50px; }
+  	50%  { margin-top: 150px; } 
+  	to   { margin-top: 100px; }
+}
+
+
+
+/* vh vw rem em and percentages to use to size thisfor bigger images */
+
+
+
+
+/*how to make a default background image if the url fails? USE LINK FROM NICOLE
+http://clipart-library.com/images/Lidjz7zi4.png
+*/
+
+
+/*SPRITE SHEET V COMPLICATE*/
+
+
