@@ -1,19 +1,19 @@
 /*how to get videogame background image to expand to full large top monitor screen size without white spaces*/
 
 /*how to get alert to stop repeating*/
-/* turn off the light shows inconsistent black screen*/
+/* turn off the light shows inconsistent black screen and turn on the light shows zoom*/
 
 #gameTitle {
 	z-index: 2;
-	background-color: rgba(255, 0, 0, 0.6);
+	background-color: rgba(255, 0, 0, 0.3);
 	text-align: center;
 	color: #b8e554;
-
+	margin-top: 5px;
 }
 
 #userPetName{
 	z-index: 2;
-	background-color: rgba(155, 122, 250, 0.5);
+	background-color: rgba(155, 122, 250, 0.2);
 	text-align: center;
 	color: #b8e554;
 }
@@ -32,10 +32,11 @@ ul {
 	display: flex;
 	background-color: rgba(11, 30, 220, 0.5);
 	flex-direction: column;
-	margin-right: 600px;
 	font-weight: 900;
 	color: lightgreen;
 	float: left;
+	width: 50%;
+	margin-top: 10%;
 
 
 ;
@@ -44,10 +45,11 @@ ul {
 tr
 	{
 	display: flex;
-	background-color: rgba(241, 10, 220, 0.6);
+	background-color: rgba(41, 10, 220, 0.6);
 	flex-direction: column;
-	margin-right: 600px;
+	margin-top: 50px;
 	font-weight: 900;
+	font-size: 28px;
 	color: lightgreen;
 	float: left;
 	}
@@ -59,21 +61,61 @@ tr
 		background-image: url(images/petpicture.jpg); /*dom manipulation change background image css*/
 		background-size: contain;
 		background-repeat: no-repeat;
-  		width: 150px;
-  		height: 150px;
-  		float: right;
-  		animation: userPicture 10s infinite;
+  		width: 125px;
+  		height: 125px;
+	 	animation: userPicture 4s infinite;
+  		position: absolute ;
+  		right:  45%;
+  		top: 60%;
 
 }
 
 @keyframes userPicture {
-	from { margin-top: 50px; }
-  	50%  { margin-top: 150px; } 
-  	to   { margin-top: 100px; }
+	from { margin-top: 40px; }
+  	50%  { margin-bottom: 20px; } 
+  	to   { margin-bottom: 80px; }
+}
+/**{
+	outline: 1px solid red; use this for debugging
+}*/
+.playButtons {
+	    display: flex;
+        background-color: #7b38d8;
+        border-radius: 10px;
+        border: 4px double #cccccc;
+        color: #eeeeee;
+        text-align: center;
+        font-size: 16px;
+        padding: 10px;
+        width: 175px;
+        cursor: pointer;
+        margin-top: 35px;
+        margin-left: 5px;
+}
+.startOnOff{
+		display: flex;
+		background-color: rgba(11, 30, 220, 0.7);
+        border-radius: 10px;
+        border: 4px double #cccccc;
+        color: #eeeeee;
+        text-align: center;
+        font-size: 16px;
+        padding: 10px;
+        width: 235px;
+        cursor: pointer;
+        margin: 5px;
 }
 
+.allLeftContent {
+	display: flex;
+	flex-direction: column;
+	width: 500px;
+}
 
-
+.spaceBetween {
+/*	display: flex;
+*//*	justify-content: space-between;
+*/}
 /* vh vw rem em and percentages to use to size thisfor bigger images */
 
 

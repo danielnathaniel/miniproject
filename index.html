@@ -7,13 +7,14 @@
 
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Tamagotchi Time!</title>
+	<title>TAMAGOTCHI TIME!</title>
 
 </head>
 <body>
-
-	<h1 id="gameTitle">Tamagotchi Time!</h1>
-	<h2 id="userPetName">Your Pet's Name is</h2>
+<div class = spaceBetween>
+	<h1 id="gameTitle">TAMAGOTCHI TIME!</h1>
+	<h2 id="userPetName">YOUR TAMAGOTCHI'S NAME IS</h2>
+<div class = "allLeftContent">
 	<div class="rules">
 		<ul>
 		<li> IF YOUR PET'S HUNGER, SLEEPINESS OR BOREDOM REACHES 10, YOUR PET DIES :(</li>
@@ -28,31 +29,33 @@
 </form> DO NOT USE BECAUSE SERVER HELPS BETTER WITH FORMS-->
 <!-- use event object instead of form -->
 
-
-<button id="petEat">FEED YOUR PET</button>
-<button id="petSleep">LET YOUR PET SLEEP</button>
-<button id="petPlay">PLAY WITH YOUR PET</button>
+<div class = "playButtons">
+	<button id="petEat">FEED YOUR PET</button>
+	<button id="petSleep">LET YOUR PET SLEEP</button>
+	<button id="petPlay">PLAY WITH YOUR PET</button>
+</div>
 <!-- onclick="userPet.addWeight()"
 onclick="userPet.addSleepiness()"
 onclick="userPet.addBored()"
 added this in JS -->
+<div class = startOnOff>
 <button onclick="userName()">CLICK TO START AND NAME YOUR TAMAGOTCHI</button>
 <button onclick="userPet.lightOff()">TURN OFF LIGHTS</button>
 <button onclick="userPet.lightOn()">TURN ON LIGHTS</button>
-
+</div>
 <div>
 <table>
   <tr>
-    <td id="hungerDisplay">Hunger = 1</td>
-    <td id="sleepinessDisplay">Sleepiness = 1</td>
-    <td id="boredomDisplay">Boredom = 1</td>
-    <td id="ageDisplay">Age = 1</td>
+    <td id="hungerDisplay">Hunger = 0</td>
+    <td id="sleepinessDisplay">Sleepiness = 0</td>
+    <td id="boredomDisplay">Boredom = 0</td>
+    <td id="ageDisplay">Age = 0</td>
   </tr>
 </table>
 </div>
-
+</div>
 <div id = "petPicture"></div>
-
+</div>
 <script>
 
 

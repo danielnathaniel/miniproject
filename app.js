@@ -43,12 +43,10 @@ initiateFirst = () => {
 	document.getElementById("petEat").addEventListener("click", userPet.addWeight);
 	document.getElementById("petPlay").addEventListener("click", userPet.addBored);
 	setInterval(setMetrics, 500)
-	setInterval(userPet.increaseBored, 3000);
-	setInterval(userPet.increaseSleepiness, 3000)
-	setInterval(userPet.increaseHunger, 3000)
-	setInterval(userPet.addAge, 2000)
-
-
+	setInterval(userPet.increaseBored, 2500);
+	setInterval(userPet.increaseSleepiness, 2500)
+	setInterval(userPet.increaseHunger, 2500)
+	setInterval(userPet.addAge, 3000)
 
 }
 
@@ -57,12 +55,12 @@ setMetrics = () => {
 	document.getElementById("hungerDisplay").innerText = "Hunger = " + userPet.hunger;
 	document.getElementById("sleepinessDisplay").innerText = "Sleepiness = " + userPet.sleepiness
 	document.getElementById("boredomDisplay").innerText = "Boredom = " +userPet.boredom
-	document.getElementById("ageDisplay").innerText = "age = " + userPet.age
+	document.getElementById("ageDisplay").innerText = "Age = " + userPet.age
 
-	if (userPet.age === 4) {
+	if (userPet.age === 3) {
 	  document.getElementById("petPicture").style.backgroundImage = "url('images/pokemon-4784547_960_720.png')";
-	  document.getElementById("petPicture").style.width = "320px";
-	  document.getElementById("petPicture").style.height = "320px";
+	  document.getElementById("petPicture").style.width = "250px";
+	  document.getElementById("petPicture").style.height = "250px";
 
 	  		alert("YOU HAVE EVOLVED!")
 }
@@ -76,10 +74,10 @@ setMetrics = () => {
 
 
 userName = () => {
-  let newName = prompt("Please enter your pet's name", "Lucy");
+  let newName = prompt("Please enter your Tamagotchi's name", "CHARQUEEN").toUpperCase();
   if (newName != null) {
     document.getElementById("userPetName").innerText =
-    "Your pet's name is " + newName + "!";
+    "YOUR TAMAGOTCHI'S NAME IS " + newName + "!";
     initiateFirst();
   }
 }
@@ -120,25 +118,18 @@ class Pet {
 	}
 	lightOn = () => {
 	document.body.style.background = "url('images/retro-s-videogame-tunnel-background-mountains-sun-bit-depth-field-inspired-vintage-videogames-web-print-156623128.jpeg') no-repeat center center fixed";
+	document.body.style.backgroundSize = "cover"
 	}
 	lightOff = () => {
-	document.body.style.background = "url('images/darkness.png')"
+	document.body.style.background = "url('images/darkness.png')center center fixed";
+	document.body.style.backgroundSize = "cover"
 	}
-
 }
+
 
 	let userPet = new Pet()
 
 // new pet is an object and is no longer a class
-
-
-
-//did the above code in button id in JS
-// need to create a button before this works-did this in html
-
-// console log hungry and use dom manip to put in broswer ---use innertext https://sebhastian.com/display-javascript-variable-html/ 
-
-
 
 
 
