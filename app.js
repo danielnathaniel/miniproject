@@ -42,7 +42,7 @@ initiateFirst = () => {
 	document.getElementById("petSleep").addEventListener("click", userPet.addSleepiness);
 	document.getElementById("petEat").addEventListener("click", userPet.addWeight);
 	document.getElementById("petPlay").addEventListener("click", userPet.addBored);
-	setInterval(setMetrics, 1000)
+	setInterval(setMetrics, 500)
 	setInterval(userPet.increaseBored, 3000);
 	setInterval(userPet.increaseSleepiness, 3000)
 	setInterval(userPet.increaseHunger, 3000)
@@ -61,11 +61,15 @@ setMetrics = () => {
 
 	if (userPet.age === 4) {
 	  document.getElementById("petPicture").style.backgroundImage = "url('images/pokemon-4784547_960_720.png')";
+	  document.getElementById("petPicture").style.width = "320px";
+	  document.getElementById("petPicture").style.height = "320px";
+
 	  		alert("YOU HAVE EVOLVED!")
 }
 	if ( userPet.sleepiness === 10 || userPet.boredom === 10 || userPet.hunger === 10 )	{
 		document.getElementById("petPicture").style.backgroundImage = "url('images/Screen Shot 2022-07-07 at 4.15.02 PM.png')";
 		alert("Your pet is in heaven now")
+		document.getElementById("petPicture").style.animation = "null";
 	}	
 
 }
@@ -82,8 +86,7 @@ userName = () => {
 
 
 class Pet {
-	constructor(name, age, sleepiness, weight, boredom, hunger){
-		this.name = name
+	constructor(){
 		this.age = 0
 		this.sleepiness = 0
 		this.boredom = 0
@@ -91,31 +94,29 @@ class Pet {
 	}
 
 	addWeight = () => {
-		this.weight++
-		this.hunger--
+		if(this.hunger > 0){this.hunger--}
 	}
 	
 	addAge = () => {
-		this.age++
+		if(this.age < 50){this.age++}
 	}
 
 	addBored = () => {
-		this.boredom--
+		if (this.boredom > 0) {this.boredom--}
 	}
 
 	addSleepiness = () => {
-		this.sleepiness--
-		console.log(this.sleepiness)
+		if(this.sleepiness > 0){this.sleepiness--} 
 	}
 
 	increaseBored = () => {
-		this.boredom++
+		if (this.boredom < 11)this.boredom++
 	}
 	increaseSleepiness = () => {
-		this.sleepiness++
+		if(this.sleepiness < 11){this.sleepiness++}
 	}
 	increaseHunger = () => {
-		this.hunger++
+		if(this.hunger < 11){this.hunger++};
 	}
 	lightOn = () => {
 	document.body.style.background = "url('images/retro-s-videogame-tunnel-background-mountains-sun-bit-depth-field-inspired-vintage-videogames-web-print-156623128.jpeg') no-repeat center center fixed";

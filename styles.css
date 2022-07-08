@@ -1,7 +1,7 @@
 /*how to get videogame background image to expand to full large top monitor screen size without white spaces*/
 
 /*how to get alert to stop repeating*/
-
+/* turn off the light shows inconsistent black screen*/
 
 #gameTitle {
 	z-index: 2;
@@ -59,8 +59,8 @@ tr
 		background-image: url(images/petpicture.jpg); /*dom manipulation change background image css*/
 		background-size: contain;
 		background-repeat: no-repeat;
-  		width: 200px;
-  		height: 200px;
+  		width: 150px;
+  		height: 150px;
   		float: right;
   		animation: userPicture 10s infinite;
 
